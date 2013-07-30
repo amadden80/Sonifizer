@@ -20,14 +20,13 @@ describe ApiController do
 
     describe "JSON request" do
 
-      # before :each do
-      #   get :index, :format => :json
-      # end
+      before :each do
+        get :index, :format => :json
+      end
 
-      # it "api responds successfully to javascript request" do
-      #   pending
-      #   # expect(response).to be_success
-      # end
+      it "api responds successfully to javascript request" do
+        expect(response).to be_success
+      end
 
     end
 
