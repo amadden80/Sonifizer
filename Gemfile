@@ -16,13 +16,10 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 
-
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 1.2'
 
-# gem 'unicorn'
-
-
+gem 'unicorn'
 
 group :development, :test do
   gem 'pry-rails'
@@ -35,7 +32,8 @@ group :development, :test do
  
   # gem 'annotate'
  
- # gem 'rspec-rails'
+  # Testing
+  gem 'rspec-rails', '~> 2.0'
  # gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'
  # gem 'database_cleaner'
  #  gem 'cucumber-rails', :require => false
