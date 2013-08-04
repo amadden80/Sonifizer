@@ -3,7 +3,6 @@ class ApiController < ApplicationController
 
     include ApplicationHelper
     before_action :get_stamp
-    # skip_before_action :verify_authenticity_token, if: :json_request?
 
     def index
 
@@ -29,28 +28,24 @@ class ApiController < ApplicationController
 
 
     def username_responder
-        params["username"] = params["username"] || "Sonifizer"
 
+        username = params["username"] || "Sonifizer"
         worker = SonifizerWorker.new()
-        @audio_data = get_string_tone_audio_text_file(params["username"], 200, 800, 0.5, 8000, 0.75)
+        audio_data = get_string_tone_audio_text_file(username, 200, 800, 0.5, 8000, 0.75)
 
-        msg = { :audio=> @audio_data,
+        @response = { :audio=> audio_data,
                 :info => @stamp,
                 :type => "Character Array",
-                :message => "Success!"}
+                :message => "Success!", 
+                :username => username}
 
         respond_to do |format|
-            format.json  {render :json => msg}
+            format.html {render "user.html"}
+            format.json  {render :json => @response}
         end        
 
     end
 
-
-    protected
-
-    def json_request?
-        request.format.json?
-    end
 
     private
 

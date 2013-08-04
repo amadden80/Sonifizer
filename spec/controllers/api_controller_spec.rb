@@ -16,7 +16,6 @@ describe ApiController do
       end
     end
 
-
     describe "JSON request" do
 
       before :each do
