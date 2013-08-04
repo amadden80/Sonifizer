@@ -5,7 +5,7 @@ Sonifizer::Application.routes.draw do
 
   get '/api' => 'api#index'
  
-  post '/api/username' => 'api#username_responder'  
+  get '/api/username' => 'api#username_responder'  
 
 
   # The priority is based upon order of creation: first created -> highest priority.

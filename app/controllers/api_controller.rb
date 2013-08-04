@@ -3,7 +3,7 @@ class ApiController < ApplicationController
 
     include ApplicationHelper
     before_action :get_stamp
-    skip_before_action :verify_authenticity_token, if: :json_request?
+    # skip_before_action :verify_authenticity_token, if: :json_request?
 
     def index
 
@@ -20,10 +20,10 @@ class ApiController < ApplicationController
                 :type => "empty", 
                 :message => "Success!"}
 
-        # respond_to do |format|
-        #     format.html {}
-        #     format.json  { render :json => msg } 
-        # end   
+        respond_to do |format|
+            format.html {}
+            format.json  { render :json => msg } 
+        end   
 
     end
 
