@@ -21,6 +21,8 @@ gem 'turbolinks'
 
 gem 'unicorn'
 
+gem 'wavefile'
+
 group :development, :test do
   gem 'pry-rails'
   gem 'pry-debugger'
@@ -47,8 +49,10 @@ group :production do
   gem 'rails_12factor'
 end
 
+group :test do
+  gem 'simplecov', :require => false
+end
 
- 
 group :development do
     gem 'better_errors'
 end

@@ -1,0 +1,2026 @@
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <title>Code coverage for Sonifizer</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <script src='./assets/0.7.1/application.js' type='text/javascript'></script>    
+    <link href='./assets/0.7.1/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" type="image/png" href="./assets/0.7.1/favicon_green.png" />
+    <link rel="icon" type="image/png" href="./assets/0.7.1/favicon.png" />
+  </head>
+  
+  <body>
+    <div id="loading">
+      <img src="./assets/0.7.1/loading.gif" alt="loading"/>
+    </div>
+    <div id="wrapper" style="display:none;">
+      <div class="timestamp">Generated <abbr class="timeago" title="2013-08-02T17:19:20-04:00">2013-08-02T17:19:20-04:00</abbr></div>
+      <ul class="group_tabs"></ul>
+
+      <div id="content">
+        <div class="file_list_container" id="AllFiles">
+  <h2>
+    <span class="group_name">All Files</span>
+    (<span class="covered_percent"><span class="green">100.0%</span></span>
+     covered at
+     <span class="covered_strength">
+       <span class="green">
+         3150.73
+       </span>
+    </span> hits/line)
+  </h2>
+  <a name="AllFiles"></a>
+  <div>
+    <b>8</b> files in total.
+    <b>135</b> relevant lines. 
+    <span class="green"><b>135</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed </span>
+  </div>
+  <table class="file_list">
+    <thead>
+      <tr>
+        <th>File</th>
+        <th>% covered</th>
+        <th>Lines</th>
+        <th>Relevant Lines</th>
+        <th>Lines covered</th>
+        <th>Lines missed</th>
+        <th>Avg. Hits / Line</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td class="strong"><a href="#52ce7c6540f294dceebd3265ad661f70061fb523" class="src_link" title="app/controllers/api_controller.rb">app/controllers/api_controller.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>52</td>
+        <td>21</td>
+        <td>21</td>
+        <td>0</td>
+        <td>3.3</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#6903758bc3461a71aa05ffeef7e5d6d5e7019df3" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>5</td>
+        <td>2</td>
+        <td>2</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#6a4967548fec6574e2bf7ced8f6d97e444aaaaee" class="src_link" title="app/controllers/home_controller.rb">app/controllers/home_controller.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>6</td>
+        <td>2</td>
+        <td>2</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#5fbd127ec9a9e6cd5f4f008a079d3825fafa0f90" class="src_link" title="app/helpers/application_helper.rb">app/helpers/application_helper.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>9</td>
+        <td>4</td>
+        <td>4</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#58c36fb23d567e4abdbf583cd60e8ebe3f329a88" class="src_link" title="app/models/sonifizer_worker.rb">app/models/sonifizer_worker.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>26</td>
+        <td>16</td>
+        <td>16</td>
+        <td>0</td>
+        <td>4.4</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#987849357fd8e58db046612c5b4a6499eb5edc3f" class="src_link" title="lib/audio_base_64.rb">lib/audio_base_64.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>13</td>
+        <td>8</td>
+        <td>8</td>
+        <td>0</td>
+        <td>3.3</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#339237665d8bf8b227fa0c6e710923b1d8c2106a" class="src_link" title="lib/sonfizer_synth.rb">lib/sonfizer_synth.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>99</td>
+        <td>65</td>
+        <td>65</td>
+        <td>0</td>
+        <td>25187.6</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#a6d547c5dcc139196a4ce36c93c621445b42737e" class="src_link" title="lib/wave_handler.rb">lib/wave_handler.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>28</td>
+        <td>17</td>
+        <td>17</td>
+        <td>0</td>
+        <td>4.2</td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+
+
+        
+          <div class="file_list_container" id="Controllers">
+  <h2>
+    <span class="group_name">Controllers</span>
+    (<span class="covered_percent"><span class="green">100.0%</span></span>
+     covered at
+     <span class="covered_strength">
+       <span class="green">
+         1.77
+       </span>
+    </span> hits/line)
+  </h2>
+  <a name="Controllers"></a>
+  <div>
+    <b>3</b> files in total.
+    <b>25</b> relevant lines. 
+    <span class="green"><b>25</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed </span>
+  </div>
+  <table class="file_list">
+    <thead>
+      <tr>
+        <th>File</th>
+        <th>% covered</th>
+        <th>Lines</th>
+        <th>Relevant Lines</th>
+        <th>Lines covered</th>
+        <th>Lines missed</th>
+        <th>Avg. Hits / Line</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td class="strong"><a href="#52ce7c6540f294dceebd3265ad661f70061fb523" class="src_link" title="app/controllers/api_controller.rb">app/controllers/api_controller.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>52</td>
+        <td>21</td>
+        <td>21</td>
+        <td>0</td>
+        <td>3.3</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#6903758bc3461a71aa05ffeef7e5d6d5e7019df3" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>5</td>
+        <td>2</td>
+        <td>2</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#6a4967548fec6574e2bf7ced8f6d97e444aaaaee" class="src_link" title="app/controllers/home_controller.rb">app/controllers/home_controller.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>6</td>
+        <td>2</td>
+        <td>2</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+
+        
+          <div class="file_list_container" id="Models">
+  <h2>
+    <span class="group_name">Models</span>
+    (<span class="covered_percent"><span class="green">100.0%</span></span>
+     covered at
+     <span class="covered_strength">
+       <span class="green">
+         4.4
+       </span>
+    </span> hits/line)
+  </h2>
+  <a name="Models"></a>
+  <div>
+    <b>1</b> files in total.
+    <b>16</b> relevant lines. 
+    <span class="green"><b>16</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed </span>
+  </div>
+  <table class="file_list">
+    <thead>
+      <tr>
+        <th>File</th>
+        <th>% covered</th>
+        <th>Lines</th>
+        <th>Relevant Lines</th>
+        <th>Lines covered</th>
+        <th>Lines missed</th>
+        <th>Avg. Hits / Line</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td class="strong"><a href="#58c36fb23d567e4abdbf583cd60e8ebe3f329a88" class="src_link" title="app/models/sonifizer_worker.rb">app/models/sonifizer_worker.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>26</td>
+        <td>16</td>
+        <td>16</td>
+        <td>0</td>
+        <td>4.4</td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+
+        
+          <div class="file_list_container" id="Mailers">
+  <h2>
+    <span class="group_name">Mailers</span>
+    (<span class="covered_percent"><span class="green">100.0%</span></span>
+     covered at
+     <span class="covered_strength">
+       <span class="red">
+         0.0
+       </span>
+    </span> hits/line)
+  </h2>
+  <a name="Mailers"></a>
+  <div>
+    <b>0</b> files in total.
+    <b>0.0</b> relevant lines. 
+    <span class="green"><b>0.0</b> lines covered</span> and
+    <span class="red"><b>0.0</b> lines missed </span>
+  </div>
+  <table class="file_list">
+    <thead>
+      <tr>
+        <th>File</th>
+        <th>% covered</th>
+        <th>Lines</th>
+        <th>Relevant Lines</th>
+        <th>Lines covered</th>
+        <th>Lines missed</th>
+        <th>Avg. Hits / Line</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+    </tbody>
+  </table>
+</div>
+
+        
+          <div class="file_list_container" id="Helpers">
+  <h2>
+    <span class="group_name">Helpers</span>
+    (<span class="covered_percent"><span class="green">100.0%</span></span>
+     covered at
+     <span class="covered_strength">
+       <span class="yellow">
+         1.0
+       </span>
+    </span> hits/line)
+  </h2>
+  <a name="Helpers"></a>
+  <div>
+    <b>1</b> files in total.
+    <b>4</b> relevant lines. 
+    <span class="green"><b>4</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed </span>
+  </div>
+  <table class="file_list">
+    <thead>
+      <tr>
+        <th>File</th>
+        <th>% covered</th>
+        <th>Lines</th>
+        <th>Relevant Lines</th>
+        <th>Lines covered</th>
+        <th>Lines missed</th>
+        <th>Avg. Hits / Line</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td class="strong"><a href="#5fbd127ec9a9e6cd5f4f008a079d3825fafa0f90" class="src_link" title="app/helpers/application_helper.rb">app/helpers/application_helper.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>9</td>
+        <td>4</td>
+        <td>4</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+
+        
+          <div class="file_list_container" id="Libraries">
+  <h2>
+    <span class="group_name">Libraries</span>
+    (<span class="covered_percent"><span class="green">100.0%</span></span>
+     covered at
+     <span class="covered_strength">
+       <span class="green">
+         8398.37
+       </span>
+    </span> hits/line)
+  </h2>
+  <a name="Libraries"></a>
+  <div>
+    <b>3</b> files in total.
+    <b>90</b> relevant lines. 
+    <span class="green"><b>90</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed </span>
+  </div>
+  <table class="file_list">
+    <thead>
+      <tr>
+        <th>File</th>
+        <th>% covered</th>
+        <th>Lines</th>
+        <th>Relevant Lines</th>
+        <th>Lines covered</th>
+        <th>Lines missed</th>
+        <th>Avg. Hits / Line</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td class="strong"><a href="#987849357fd8e58db046612c5b4a6499eb5edc3f" class="src_link" title="lib/audio_base_64.rb">lib/audio_base_64.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>13</td>
+        <td>8</td>
+        <td>8</td>
+        <td>0</td>
+        <td>3.3</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#339237665d8bf8b227fa0c6e710923b1d8c2106a" class="src_link" title="lib/sonfizer_synth.rb">lib/sonfizer_synth.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>99</td>
+        <td>65</td>
+        <td>65</td>
+        <td>0</td>
+        <td>25187.6</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#a6d547c5dcc139196a4ce36c93c621445b42737e" class="src_link" title="lib/wave_handler.rb">lib/wave_handler.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>28</td>
+        <td>17</td>
+        <td>17</td>
+        <td>0</td>
+        <td>4.2</td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+
+        
+          <div class="file_list_container" id="Plugins">
+  <h2>
+    <span class="group_name">Plugins</span>
+    (<span class="covered_percent"><span class="green">100.0%</span></span>
+     covered at
+     <span class="covered_strength">
+       <span class="red">
+         0.0
+       </span>
+    </span> hits/line)
+  </h2>
+  <a name="Plugins"></a>
+  <div>
+    <b>0</b> files in total.
+    <b>0.0</b> relevant lines. 
+    <span class="green"><b>0.0</b> lines covered</span> and
+    <span class="red"><b>0.0</b> lines missed </span>
+  </div>
+  <table class="file_list">
+    <thead>
+      <tr>
+        <th>File</th>
+        <th>% covered</th>
+        <th>Lines</th>
+        <th>Relevant Lines</th>
+        <th>Lines covered</th>
+        <th>Lines missed</th>
+        <th>Avg. Hits / Line</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+    </tbody>
+  </table>
+</div>
+
+        
+      </div>
+    
+      <div id="footer">
+        Generated by <a href="http://github.com/colszowka/simplecov">simplecov</a> v0.7.1 
+        and simplecov-html v0.7.1<br/>
+        using RSpec
+      </div>
+    
+      <div class="source_files">
+      
+        <div class="source_table" id="52ce7c6540f294dceebd3265ad661f70061fb523">
+  <div class="header">
+    <h3>app/controllers/api_controller.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>21</b> relevant lines. 
+      <span class="green"><b>21</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="never" data-hits="" data-linenumber="1">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class ApiController &lt; ApplicationController</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    before_action :get_stamp</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">    </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def index</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="9">
+          <span class="hits">4</span>
+          
+          <code class="ruby">        worker = SonifizerWorker.new()</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="10">
+          <span class="hits">4</span>
+          
+          <code class="ruby">        worker.worker_make_tone_64(440, 0.1, 44100, 0.75)</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="11">
+          <span class="hits">4</span>
+          
+          <code class="ruby">        @audio_data = worker.audio_text</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="12">
+          <span class="hits">4</span>
+          
+          <code class="ruby">        @tone = worker.tone</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="14">
+          <span class="hits">4</span>
+          
+          <code class="ruby">        msg = { :info =&gt; @stamp,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">                :type =&gt; &quot;empty&quot;, </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">                :message =&gt; &quot;Success!&quot;}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="18">
+          <span class="hits">4</span>
+          
+          <code class="ruby">        respond_to do |format|</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="19">
+          <span class="hits">4</span>
+          
+          <code class="ruby">            format.html</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="20">
+          <span class="hits">7</span>
+          
+          <code class="ruby">            format.json  { render :json =&gt; msg } </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">        end   </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def char_array</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="28">
+          <span class="hits">3</span>
+          
+          <code class="ruby">        worker = SonifizerWorker.new()</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="29">
+          <span class="hits">3</span>
+          
+          <code class="ruby">        @audio_data = worker.worker_make_tone_64(200, 0.1, 44100, 0.75, 1000)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="31">
+          <span class="hits">3</span>
+          
+          <code class="ruby">        msg = { :info =&gt; @stamp,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">                :type =&gt; &quot;Character Array&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby">                :message =&gt; &quot;Success!&quot;}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="35">
+          <span class="hits">3</span>
+          
+          <code class="ruby">        respond_to do |format|</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="36">
+          <span class="hits">3</span>
+          
+          <code class="ruby">            format.html</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="37">
+          <span class="hits">6</span>
+          
+          <code class="ruby">            format.json  { render :json =&gt; msg } </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby">        end        </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="43">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    private</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="44">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="45">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def get_stamp</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="46">
+          <span class="hits">7</span>
+          
+          <code class="ruby">        @stamp = {  :written_by =&gt; &quot;Andrew Madden&quot;, </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
+          <code class="ruby">                :api =&gt; &quot;Sonifizer&quot;, </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
+          <code class="ruby">                :site =&gt; &quot;http://Sonifizer.com&quot;} </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="49">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="50">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="51">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="6903758bc3461a71aa05ffeef7e5d6d5e7019df3">
+  <div class="header">
+    <h3>app/controllers/application_controller.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>2</b> relevant lines. 
+      <span class="green"><b>2</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class ApplicationController &lt; ActionController::Base</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby">  # Prevent CSRF attacks by raising an exception.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby">  # For APIs, you may want to use :null_session instead.</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  protect_from_forgery with: :exception</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="6a4967548fec6574e2bf7ced8f6d97e444aaaaee">
+  <div class="header">
+    <h3>app/controllers/home_controller.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>2</b> relevant lines. 
+      <span class="green"><b>2</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class HomeController &lt; ApplicationController</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def index</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">    </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="5fbd127ec9a9e6cd5f4f008a079d3825fafa0f90">
+  <div class="header">
+    <h3>app/helpers/application_helper.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>4</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">module ApplicationHelper</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    require &#39;digest/md5&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def email_hash(email) </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        return Digest::MD5.hexdigest(email.downcase)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">    </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="58c36fb23d567e4abdbf583cd60e8ebe3f329a88">
+  <div class="header">
+    <h3>app/models/sonifizer_worker.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>16</b> relevant lines. 
+      <span class="green"><b>16</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="never" data-hits="" data-linenumber="1">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">include SonifizerSynth</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">include WaveHandler</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">include AudioBase64</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class SonifizerWorker</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    attr_accessor :audio_text, :tone, :filename, :path</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def initialize()</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="11">
+          <span class="hits">7</span>
+          
+          <code class="ruby">        @tone = []</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="12">
+          <span class="hits">7</span>
+          
+          <code class="ruby">        @audio_text = &quot;&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="13">
+          <span class="hits">7</span>
+          
+          <code class="ruby">        @path = &quot;&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="14">
+          <span class="hits">7</span>
+          
+          <code class="ruby">        @filename = &quot;temp_wavefile&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def worker_make_tone_64(freq, seconds, fs=44100, amplitude=0.99, fade_samples=100)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="18">
+          <span class="hits">7</span>
+          
+          <code class="ruby">        @tone = makeTone(freq, seconds, fs, amplitude)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="19">
+          <span class="hits">7</span>
+          
+          <code class="ruby">        @tone = applyFades(@tone, fade_samples)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="20">
+          <span class="hits">7</span>
+          
+          <code class="ruby">        @path = writeWavefile(@tone, fs, @filename)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="21">
+          <span class="hits">7</span>
+          
+          <code class="ruby">        data = getWaveData(&#39;././public/&#39;+@filename+&quot;.wav&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="22">
+          <span class="hits">7</span>
+          
+          <code class="ruby">        @audio_text = gen_uri_audio_data(data)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="987849357fd8e58db046612c5b4a6499eb5edc3f">
+  <div class="header">
+    <h3>lib/audio_base_64.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>8</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &quot;base64&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">module AudioBase64 </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def gen_uri_audio_data(wave_data)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="6">
+          <span class="hits">7</span>
+          
+          <code class="ruby">      data = Base64.strict_encode64(wave_data)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="7">
+          <span class="hits">7</span>
+          
+          <code class="ruby">      data_string = &quot;data:audio/wav;base64,#{data}&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="8">
+          <span class="hits">7</span>
+          
+          <code class="ruby">      data_string</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    module_function :gen_uri_audio_data</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    public :gen_uri_audio_data</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="339237665d8bf8b227fa0c6e710923b1d8c2106a">
+  <div class="header">
+    <h3>lib/sonfizer_synth.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>65</b> relevant lines. 
+      <span class="green"><b>65</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">module SonifizerSynth</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def twoPI </code>
+        </li>
+      
+        <li class="covered" data-hits="339572" data-linenumber="4">
+          <span class="hits">339572</span>
+          
+          <code class="ruby">        (2 * Math::PI) </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    module_function :twoPI</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    public :twoPI</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def linspace(lowNum, highNum, numSamples)</code>
+        </li>
+      
+        <li class="covered" data-hits="49" data-linenumber="10">
+          <span class="hits">49</span>
+          
+          <code class="ruby">        lowNum = lowNum.to_f</code>
+        </li>
+      
+        <li class="covered" data-hits="49" data-linenumber="11">
+          <span class="hits">49</span>
+          
+          <code class="ruby">        highNum = highNum.to_f</code>
+        </li>
+      
+        <li class="covered" data-hits="49" data-linenumber="12">
+          <span class="hits">49</span>
+          
+          <code class="ruby">        numSamples = numSamples.to_f</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="49" data-linenumber="14">
+          <span class="hits">49</span>
+          
+          <code class="ruby">        aToB = (0...(numSamples)).to_a</code>
+        </li>
+      
+        <li class="covered" data-hits="49" data-linenumber="15">
+          <span class="hits">49</span>
+          
+          <code class="ruby">        dif = highNum - lowNum</code>
+        </li>
+      
+        <li class="covered" data-hits="49" data-linenumber="16">
+          <span class="hits">49</span>
+          
+          <code class="ruby">        aToB.map do |sample|</code>
+        </li>
+      
+        <li class="covered" data-hits="478731" data-linenumber="17">
+          <span class="hits">478731</span>
+          
+          <code class="ruby">            ((sample/(numSamples-1)) * dif) + lowNum</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    module_function :linspace</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    public :linspace</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def cumsum(vect)</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="25">
+          <span class="hits">6</span>
+          
+          <code class="ruby">        cumSum = 0</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="26">
+          <span class="hits">6</span>
+          
+          <code class="ruby">        vect = vect.map do|sample|  </code>
+        </li>
+      
+        <li class="covered" data-hits="132310" data-linenumber="27">
+          <span class="hits">132310</span>
+          
+          <code class="ruby">            cumSum = cumSum + sample</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="29">
+          <span class="hits">6</span>
+          
+          <code class="ruby">        return vect</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="31">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    module_function :cumsum</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="32">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    public :cumsum</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby">    </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="35">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def normalize(tone, newMax = 0.98 )</code>
+        </li>
+      
+        <li class="covered" data-hits="18" data-linenumber="36">
+          <span class="hits">18</span>
+          
+          <code class="ruby">        maxVal = tone.max {|a,b| a.abs &lt;=&gt; b.abs }</code>
+        </li>
+      
+        <li class="covered" data-hits="24" data-linenumber="37">
+          <span class="hits">24</span>
+          
+          <code class="ruby">        tone.map{|sample| newMax*(sample/maxVal)}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="39">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    module_function :normalize</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="40">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    public :normalize</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="43">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def applyFadeIn(tone, sampsIn)</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="44">
+          <span class="hits">14</span>
+          
+          <code class="ruby">        ramp = linspace(0.0, 1.0, sampsIn.to_f)</code>
+        </li>
+      
+        <li class="covered" data-hits="3435" data-linenumber="45">
+          <span class="hits">3435</span>
+          
+          <code class="ruby">        ramp.each_with_index { |sample, indx| tone[indx] *= sample }</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="46">
+          <span class="hits">14</span>
+          
+          <code class="ruby">        tone</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="48">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    module_function :applyFadeIn</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="49">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    public :applyFadeIn</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="50">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="51">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="52">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def applyFadeOut(tone, sampsIn)</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="53">
+          <span class="hits">14</span>
+          
+          <code class="ruby">        ramp = linspace(0.0, 1.0, sampsIn.to_f)</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="54">
+          <span class="hits">14</span>
+          
+          <code class="ruby">        vectLeng = tone.count</code>
+        </li>
+      
+        <li class="covered" data-hits="3435" data-linenumber="55">
+          <span class="hits">3435</span>
+          
+          <code class="ruby">        ramp.each_with_index { |sample, indx| tone[vectLeng-indx-1] *= sample }</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="56">
+          <span class="hits">14</span>
+          
+          <code class="ruby">        tone</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="57">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="58">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    module_function :applyFadeOut</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="59">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    public :applyFadeOut</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="60">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="61">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="62">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def applyFades(tone, numSamples)</code>
+        </li>
+      
+        <li class="covered" data-hits="11" data-linenumber="63">
+          <span class="hits">11</span>
+          
+          <code class="ruby">        tone = applyFadeOut(tone, numSamples.to_f)</code>
+        </li>
+      
+        <li class="covered" data-hits="11" data-linenumber="64">
+          <span class="hits">11</span>
+          
+          <code class="ruby">        tone = applyFadeIn(tone, numSamples.to_f)</code>
+        </li>
+      
+        <li class="covered" data-hits="11" data-linenumber="65">
+          <span class="hits">11</span>
+          
+          <code class="ruby">        return tone</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="66">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="67">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    module_function :applyFades</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="68">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    public :applyFades</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="69">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="70">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="71">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def timeGen(seconds, fs)</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="72">
+          <span class="hits">14</span>
+          
+          <code class="ruby">        linspace(0, seconds-(1/fs), seconds*fs);</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="73">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="74">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    module_function :timeGen</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="75">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    public :timeGen</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="76">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="77">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="78">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def makeTone(freq, seconds, fs=44100, amplitude=0.99)</code>
+        </li>
+      
+        <li class="covered" data-hits="11" data-linenumber="79">
+          <span class="hits">11</span>
+          
+          <code class="ruby">        timeVect = timeGen(seconds, fs)</code>
+        </li>
+      
+        <li class="covered" data-hits="207282" data-linenumber="80">
+          <span class="hits">207282</span>
+          
+          <code class="ruby">        phase = timeVect.map{|sample| sample * twoPI * freq }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="81">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="11" data-linenumber="82">
+          <span class="hits">11</span>
+          
+          <code class="ruby">        4 + 3</code>
+        </li>
+      
+        <li class="covered" data-hits="207282" data-linenumber="83">
+          <span class="hits">207282</span>
+          
+          <code class="ruby">        tone = phase.map{|sample|  (amplitude * Math.sin(sample)).to_f}</code>
+        </li>
+      
+        <li class="covered" data-hits="11" data-linenumber="84">
+          <span class="hits">11</span>
+          
+          <code class="ruby">        return tone</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="85">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="86">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    module_function :makeTone</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="87">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    public :makeTone</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="88">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="89">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def makeSlideTone(startFreq, endFreq, seconds, fs=44100, amplitude=0.99)</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="90">
+          <span class="hits">3</span>
+          
+          <code class="ruby">        freqVector = linspace(startFreq, endFreq, (fs * seconds))</code>
+        </li>
+      
+        <li class="covered" data-hits="132304" data-linenumber="91">
+          <span class="hits">132304</span>
+          
+          <code class="ruby">        phase = cumsum(freqVector.map{|sample| sample/fs * twoPI})</code>
+        </li>
+      
+        <li class="covered" data-hits="132304" data-linenumber="92">
+          <span class="hits">132304</span>
+          
+          <code class="ruby">        tone = phase.map{|sample|  (amplitude * Math.sin(sample)).to_f}</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="93">
+          <span class="hits">3</span>
+          
+          <code class="ruby">        return tone</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="94">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="95">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    module_function :makeSlideTone</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="96">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    public :makeSlideTone</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="97">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="98">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="99">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="a6d547c5dcc139196a4ce36c93c621445b42737e">
+  <div class="header">
+    <h3>lib/wave_handler.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>17</b> relevant lines. 
+      <span class="green"><b>17</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">include WaveFile</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">module WaveHandler</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def writeWavefile(tone, fs, filename)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="7">
+          <span class="hits">7</span>
+          
+          <code class="ruby">        filename = @filename.gsub(&#39;.wav&#39;, &#39;&#39;)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="8">
+          <span class="hits">7</span>
+          
+          <code class="ruby">        local_path = Rails.root.join(&quot;public&quot;).join(&quot;#{filename}.wav&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="10">
+          <span class="hits">7</span>
+          
+          <code class="ruby">        format = Format.new(:mono, :pcm_16, fs)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="11">
+          <span class="hits">7</span>
+          
+          <code class="ruby">        writer = Writer.new(local_path, format)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="12">
+          <span class="hits">7</span>
+          
+          <code class="ruby">        buffer = Buffer.new(tone, Format.new(:mono, :float, fs))</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="13">
+          <span class="hits">7</span>
+          
+          <code class="ruby">        writer.write(buffer)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="14">
+          <span class="hits">7</span>
+          
+          <code class="ruby">        writer.close()</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="16">
+          <span class="hits">7</span>
+          
+          <code class="ruby">        return local_path</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    module_function :writeWavefile</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    public :writeWavefile</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def getWaveData(local_path)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="23">
+          <span class="hits">7</span>
+          
+          <code class="ruby">        IO.read(local_path) </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    module_function :getWaveData</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    public :getWaveData</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+      </div>
+    </div>
+  </body>
+</html>
