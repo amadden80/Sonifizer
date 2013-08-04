@@ -12,6 +12,8 @@ class ApiController < ApplicationController
         @slide_audio_data_02 = get_slide_tone_audio_text_file(100, 1000, 0.1, 44100, 0.75)
         @data_audio_data_01 = get_data_tone_audio_text_file([1, 2, 1, 1], 100, 1000, 2, 44100, 0.75)
         @data_audio_data_02 = get_data_tone_audio_text_file([5, 4, 3, 2, 1, 3, 5], 500, 700, 2, 44100, 0.75)
+        @string_audio_data_01 = get_string_tone_audio_text_file("aazazzzazaazz", 200, 500, 0.5, 44100, 0.75)
+        @string_audio_data_02 = get_string_tone_audio_text_file("Sonifizer1983", 200, 500, 0.5, 44100, 0.75)
 
         msg = { :info => @stamp,
                 :type => "empty", 

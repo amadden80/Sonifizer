@@ -94,11 +94,19 @@ module SonifizerSynth
     public :makeSlideTone
 
     def makeDataTone(data_array, low_freq, high_freq, seconds, fs=44100, amplitude=0.99)
+        data_array = data_array.map{|k| k.to_f}
+        low_freq = low_freq.to_f
+        high_freq = high_freq.to_f
+        seconds = seconds.to_f
+        amplitude = amplitude.to_f
+
         data_length = data_array.length
         samples_per_data_point = seconds*fs / data_length
         max_point = data_array.max
         freq_range = high_freq - low_freq
-        data_array = data_array.map {|data_point| freq_range * (data_point/max_point) + low_freq}
+        data_array = data_array.map do |data_point| 
+            freq_range * (data_point/max_point) + low_freq
+        end
         previous_data_point = data_array[0]
         freqVector = []
         data_array.map do |data_point|
