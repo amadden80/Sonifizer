@@ -27,17 +27,19 @@ class ApiController < ApplicationController
     end
 
 
-    def char_array
+    def username_responder
+        params["username"] = params["username"] || "Sonifizer"
 
         worker = SonifizerWorker.new()
-        @audio_data = worker.worker_make_tone_64(200, 0.5, 44100, 0.75, 1000)
+        @audio_data = get_string_tone_audio_text_file(params["username"], 200, 800, 0.5, 8000, 0.75)
 
-        msg = { :info => @stamp,
+        msg = { :audio=> @audio_data,
+                :info => @stamp,
                 :type => "Character Array",
                 :message => "Success!"}
 
         respond_to do |format|
-            format.html
+            format.html { redirect_to root_path }
             format.json  { render :json => msg } 
         end        
 

@@ -4,8 +4,8 @@ Sonifizer::Application.routes.draw do
 
 
   get '/api' => 'api#index'
-
-  get '/api/:char_array' => 'api#char_array'  
+ 
+  post '/api/username' => 'api#username_responder'  
 
 
   # The priority is based upon order of creation: first created -> highest priority.

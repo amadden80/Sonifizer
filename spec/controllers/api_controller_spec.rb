@@ -48,10 +48,10 @@ describe ApiController do
 
 
 
-  describe "GET #char_array" do
+  describe "POST #username_responder" do
 
     before :each do
-      get :char_array, :char_array => "test", :format => :json
+      post :username_responder, {:format => :json, username: "test_name"}
     end
 
     it "api responds successfully to javascript request" do
