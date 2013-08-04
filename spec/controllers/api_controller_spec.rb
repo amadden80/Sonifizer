@@ -46,8 +46,6 @@ describe ApiController do
   end # describe "GET #index" do
 
 
-
-
   describe "POST #username_responder" do
 
     before :each do

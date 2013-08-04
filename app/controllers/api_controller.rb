@@ -3,6 +3,7 @@ class ApiController < ApplicationController
 
     include ApplicationHelper
     before_action :get_stamp
+    skip_before_action :verify_authenticity_token, if: :json_request?
 
     def index
 
@@ -19,10 +20,10 @@ class ApiController < ApplicationController
                 :type => "empty", 
                 :message => "Success!"}
 
-        respond_to do |format|
-            format.html
-            format.json  { render :json => msg } 
-        end   
+        # respond_to do |format|
+        #     format.html {}
+        #     format.json  { render :json => msg } 
+        # end   
 
     end
 
@@ -39,20 +40,25 @@ class ApiController < ApplicationController
                 :message => "Success!"}
 
         respond_to do |format|
-            format.html { redirect_to root_path }
-            format.json  { render :json => msg } 
+            format.json  {render :json => msg}
         end        
 
     end
 
 
+    protected
+
+    def json_request?
+        request.format.json?
+    end
+
     private
 
     def get_stamp
-        @stamp = {  :written_by => "Andrew Madden", 
-                :api => "Sonifizer", 
-                :site => "http://Sonifizer.com"} 
+        @stamp = {  :written_by => "Andrew Madden", :api => "Sonifizer", :site => "http://Sonifizer.com"} 
     end
+
+
 
 end
 
