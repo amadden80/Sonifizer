@@ -1,27 +1,29 @@
 %br
 %h2
-    Sonifizer Guide:
-.row
+    Sonifizer:
+.row.example-section
     .sixteen.columns
-        %section.thirdteen.columns.example-section
-            %h3.six.columns
-                Strings (Usernames):
-            %section.six.columns.offset-by-one
-                %p
-                    'abczzz'
-                %audio{src: "#{@string_audio_data_01}", controls: true} 
-                .row  
-                %p
-                    'Sonifizer2013'
-                %audio{src: "#{@string_audio_data_02}", controls: true}
-        .row
+        %section.thirdteen.columns
+            %h4.seven.columns
+                Hear your data...
+            .row
+            %p.seven.columns.offset-by-one
+                You have visualizations.  
+                Include sound in your presentations.
+            .row
+            %h4.seven.columns
+                Unique users audio-avatars (audatars)...
+            .row    
+            %p.seven.columns.offset-by-one
+                You have visualizations.  
+                Include sound in your presentations.
+
 
 %h2
     Sonifizer Examples:
-.row
-
-%br
-    %section.thirdteen.columns.example-section
+.row.example-section
+    %br
+    %section.thirdteen.columns.small-example-section
         %h3.six.columns
             Beeps:
         %section.six.columns.offset-by-one    
@@ -33,7 +35,7 @@
                 High
             %audio{src: "#{@tone_audio_data_02}", controls: true}
     .row
-    %section.thirdteen.columns.example-section
+    %section.thirdteen.columns.small-example-section
         %h3.six.columns
             Slides:
         %section.six.columns.offset-by-one  
@@ -45,7 +47,7 @@
                 Down
             %audio{src: "#{@slide_audio_data_02}", controls: true}
     .row
-    %section.thirdteen.columns.example-section
+    %section.thirdteen.columns.small-example-section
         %h3.six.columns
             Arrays:
         %section.six.columns.offset-by-one
@@ -57,7 +59,7 @@
                 [1, 100, 50, 500, 75, 750, 100, 1000, 200, 2000]
             %audio{src: "#{@data_audio_data_02}", controls: true}
     .row
-    %section.thirdteen.columns.example-section
+    %section.thirdteen.columns.small-example-section
         %h3.six.columns
             Strings (Usernames):
         %section.six.columns.offset-by-one
@@ -69,9 +71,9 @@
                 'Sonifizer2013'
             %audio{src: "#{@string_audio_data_02}", controls: true}
     .row
-.row
+.row.example-section
     .sixteen.columns
-        %section.thirdteen.columns.example-section
+        %section.thirdteen.columns
             %h3.six.columns
                 Using Sonifizer
             %section.six.columns.offset-by-one 
@@ -87,5 +89,13 @@
                 %a{href: "http://www.Sonipiz.com"} 
                     Sonipix
         .row
+.row
+    %h2
+        Sonifizer.js:
+    .row
+        .sixteen.columns
+            %section.thirdteen.columns.example-section
+                %script{src: "https://gist.github.com/amadden80/6157105.js"}
+    %h2
 
 

@@ -1,7 +1,6 @@
 Sonifizer::Application.routes.draw do
   
-  root 'home#index' 
-
+  root 'api#index' 
 
   get '/api' => 'api#index'
  

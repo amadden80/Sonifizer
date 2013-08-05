@@ -17,3 +17,8 @@
     border-bottom: 0.25em solid gray;
     padding: 2em
 }
+
+.small-example-section{
+    border-bottom: 0.25em solid lightgray;
+    padding: 0.5em
+}
