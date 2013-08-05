@@ -2,7 +2,11 @@
 class ApiController < ApplicationController
 
     include ApplicationHelper
+    include ActiveSupport
     before_action :get_stamp
+
+before_filter :cors_preflight_check
+after_filter :cors_set_access_control_headers
 
     def index
 
@@ -46,11 +50,11 @@ class ApiController < ApplicationController
         render "string.js.erb", layout: false
     end
 
-
     def array_responder_json
-        data_array = params["data_array"] || [1000, 100, 1, 0]
+        data_array = params["data"] || [1000, 100, 1, 0]
+        data_array = data_array.map{|sample| sample.to_f}
         @response = get_array_response(data_array, 200, 800, 1, 8000)
-        render "array.js.erb", layout: false
+        render "array.js.erb", layout: false        
     end
 
 
@@ -67,7 +71,7 @@ class ApiController < ApplicationController
     end
 
     def get_array_response(data_array, lowFreq, highFreq, seconds, fs)
-        audio_data = get_data_tone_audio_text_file(data_array, low_freq, high_freq, seconds, fs, 0.75)
+        audio_data = get_data_tone_audio_text_file(data_array, lowFreq, highFreq, seconds, fs, 0.75)
         response = { :audio=> audio_data,
                 :info => @stamp,
                 :type => "Character Array",
@@ -75,7 +79,6 @@ class ApiController < ApplicationController
                 }
         response
     end
-
 
 
     def get_stamp
