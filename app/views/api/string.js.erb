@@ -1,0 +1,15 @@
+
+var Sonifizer_Response_string = <%= @response[:audio].to_json.html_safe %>
+
+function Sonifizer_Play(){   
+   
+    var _body = document.getElementsByTagName('body') [0];
+    var Sonifizer_audio = document.createElement('audio');
+    Sonifizer_audio.controls = false;
+    Sonifizer_audio.autoplay = true;
+    var Sonifizer_source = document.createElement('source');
+    Sonifizer_source.src = Sonifizer_Response;
+    Sonifizer_audio.appendChild(Sonifizer_source)
+    _body.appendChild(Sonifizer_audio);
+}
+

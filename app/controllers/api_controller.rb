@@ -6,14 +6,14 @@ class ApiController < ApplicationController
 
     def index
 
-        @tone_audio_data_01 = get_tone_audio_text_file(440, 0.1, 44100, 0.75)
-        @tone_audio_data_02 = get_tone_audio_text_file(440, 0.1, 44100, 0.75)
-        @slide_audio_data_01 = get_slide_tone_audio_text_file(1000, 100, 0.1, 44100, 0.75)
-        @slide_audio_data_02 = get_slide_tone_audio_text_file(100, 1000, 0.1, 44100, 0.75)
-        @data_audio_data_01 = get_data_tone_audio_text_file([1, 2, 1, 1], 100, 1000, 2, 44100, 0.75)
-        @data_audio_data_02 = get_data_tone_audio_text_file([5, 4, 3, 2, 1, 3, 5], 500, 700, 2, 44100, 0.75)
-        @string_audio_data_01 = get_string_tone_audio_text_file("aazazzzazaazz", 200, 500, 0.5, 44100, 0.75)
-        @string_audio_data_02 = get_string_tone_audio_text_file("Sonifizer1983", 200, 500, 0.5, 44100, 0.75)
+        @tone_audio_data_01 = get_tone_audio_text_file(200, 0.25, 44100, 0.75)
+        @tone_audio_data_02 = get_tone_audio_text_file(880, 0.25, 44100, 0.75)
+        @slide_audio_data_01 = get_slide_tone_audio_text_file(100, 1000, 0.25, 44100, 0.75)
+        @slide_audio_data_02 = get_slide_tone_audio_text_file(1000, 100, 0.25, 44100, 0.75)
+        @data_audio_data_01 = get_data_tone_audio_text_file([1, 2, 3, 2, 1], 500, 700, 2, 44100, 0.75)
+        @data_audio_data_02 = get_data_tone_audio_text_file([1, 100, 50, 500, 75, 750, 100, 1000, 200, 2000], 500, 700, 2, 44100, 0.75)
+        @string_audio_data_01 = get_string_tone_audio_text_file("abczzz", 200, 500, 1, 44100, 0.75)
+        @string_audio_data_02 = get_string_tone_audio_text_file("Sonifizer2013", 200, 500, 1, 44100, 0.75)
 
         msg = { :info => @stamp,
                 :type => "empty", 
@@ -28,23 +28,31 @@ class ApiController < ApplicationController
 
     def username_responder
         username = params["username"] || "Sonifizer"
-        @response = get_username_response(username)
+        @response = get_string_response(username, 200, 800, 0.5, 8000)
         format.html {render "user.html"}
     end
 
 
     def username_responder_json
         username = params["username"] || "Sonifizer"
-        @response = get_username_response(username)
+        @response = get_string_response(username, 200, 800, 0.5, 8000)
         render "user.js.erb", layout: false
     end
 
 
+
+    def string_responder_json
+        string = params["string"] || "Sonifizer"
+        @response = get_string_response(string, 200, 800, 1, 8000)
+        render "string.js.erb", layout: false
+    end
+
+
+
     private
 
-
-    def get_username_response(username)
-        audio_data = get_string_tone_audio_text_file(username, 200, 800, 0.5, 8000, 0.75)
+    def get_string_response(username, lowFreq, highFreq, seconds, fs)
+        audio_data = get_string_tone_audio_text_file(username, lowFreq, highFreq, seconds, fs, 0.75)
         response = { :audio=> audio_data,
                 :info => @stamp,
                 :type => "Character Array",
@@ -52,7 +60,6 @@ class ApiController < ApplicationController
                 :username => username}
         response
     end
-
 
     def get_stamp
         @stamp = {  :written_by => "Andrew Madden", :api => "Sonifizer", :site => "http://Sonifizer.com"} 
