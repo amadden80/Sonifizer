@@ -14,7 +14,7 @@ gem 'jquery-rails'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'turbolinks'
-
+gem 'newrelic_rpm'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 1.2'

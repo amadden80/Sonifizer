@@ -8,7 +8,6 @@ Sonifizer::Application.routes.draw do
   get '/api/username/:username/json' => 'api#username_responder_json'  
 
 
-
   get '/api/string/:string/json' => 'api#string_responder_json'
 
   post '/api/array' => 'api#array_responder_json'  

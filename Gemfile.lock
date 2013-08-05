@@ -73,6 +73,7 @@ GEM
     mime-types (1.23)
     minitest (4.7.5)
     multi_json (1.7.7)
+    newrelic_rpm (3.6.6.147)
     pg (0.16.0)
     polyglot (0.3.3)
     pry (0.9.12.2)
@@ -173,6 +174,7 @@ DEPENDENCIES
   haml
   jquery-rails
   meta_request
+  newrelic_rpm
   pg
   pry-debugger
   pry-rails
