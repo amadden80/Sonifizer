@@ -40,13 +40,18 @@ class ApiController < ApplicationController
     end
 
 
-
     def string_responder_json
         string = params["string"] || "Sonifizer"
         @response = get_string_response(string, 200, 800, 1, 8000)
         render "string.js.erb", layout: false
     end
 
+
+    def array_responder_json
+        data_array = params["data_array"] || [1000, 100, 1, 0]
+        @response = get_array_response(data_array, 200, 800, 1, 8000)
+        render "array.js.erb", layout: false
+    end
 
 
     private
@@ -60,6 +65,18 @@ class ApiController < ApplicationController
                 :username => username}
         response
     end
+
+    def get_array_response(data_array, lowFreq, highFreq, seconds, fs)
+        audio_data = get_data_tone_audio_text_file(data_array, low_freq, high_freq, seconds, fs, 0.75)
+        response = { :audio=> audio_data,
+                :info => @stamp,
+                :type => "Character Array",
+                :message => "Success!"
+                }
+        response
+    end
+
+
 
     def get_stamp
         @stamp = {  :written_by => "Andrew Madden", :api => "Sonifizer", :site => "http://Sonifizer.com"} 
