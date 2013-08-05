@@ -5,7 +5,8 @@ Sonifizer::Application.routes.draw do
 
   get '/api' => 'api#index'
  
-  get '/api/username/:username' => 'api#username_responder'  
+  get '/api/username/:username' => 'api#username_responder_html' 
+  get '/api/username/:username/json' => 'api#username_responder_json'  
 
 
   # The priority is based upon order of creation: first created -> highest priority.

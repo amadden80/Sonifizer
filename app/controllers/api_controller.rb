@@ -26,34 +26,37 @@ class ApiController < ApplicationController
 
     end
 
-
     def username_responder
-
         username = params["username"] || "Sonifizer"
-        worker = SonifizerWorker.new()
-        audio_data = get_string_tone_audio_text_file(username, 200, 800, 0.5, 8000, 0.75)
+        @response = get_username_response(username)
+        format.html {render "user.html"}
+    end
 
-        @response = { :audio=> audio_data,
-                :info => @stamp,
-                :type => "Character Array",
-                :message => "Success!", 
-                :username => username}
 
-        respond_to do |format|
-            format.html {render "user.html"}
-            format.json  {render :json => @response}
-        end        
-
+    def username_responder_json
+        username = params["username"] || "Sonifizer"
+        @response = get_username_response(username)
+        render "user.js.erb", layout: false
     end
 
 
     private
 
-    def get_stamp
-        @stamp = {  :written_by => "Andrew Madden", :api => "Sonifizer", :site => "http://Sonifizer.com"} 
+
+    def get_username_response(username)
+        audio_data = get_string_tone_audio_text_file(username, 200, 800, 0.5, 8000, 0.75)
+        response = { :audio=> audio_data,
+                :info => @stamp,
+                :type => "Character Array",
+                :message => "Success!", 
+                :username => username}
+        response
     end
 
 
+    def get_stamp
+        @stamp = {  :written_by => "Andrew Madden", :api => "Sonifizer", :site => "http://Sonifizer.com"} 
+    end
 
 end
 
