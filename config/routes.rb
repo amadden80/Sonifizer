@@ -1,5 +1,9 @@
 Sonifizer::Application.routes.draw do
   
+  devise_for :admins
+  get '/admin' => 'admins#admin_console'
+
+
   root 'api#index' 
 
   get '/api' => 'api#index'

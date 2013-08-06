@@ -1,0 +1,21 @@
+%h1
+    Requesters:
+%table.requesters-table
+    %thead
+        %tr
+            %td
+                IP Address
+            %td
+                Total # Requests
+            %td
+                Black Listed?
+    %tbody
+        -@requesters.each do |requester|
+            %tr
+                %td
+                    =requester.ip
+                %td
+                    =requester.total_requests
+                %td
+                    =requester.black_list
+                    

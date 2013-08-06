@@ -1,12 +1,15 @@
 
 class ApiController < ApplicationController
 
+
+    REQUEST_LIMT = 100
+
+
     include ApplicationHelper
     include ActiveSupport
     before_action :get_stamp
-
-before_filter :cors_preflight_check
-after_filter :cors_set_access_control_headers
+    before_action :cors_preflight_check
+    after_action :cors_set_access_control_headers
 
     def index
 
@@ -38,29 +41,44 @@ after_filter :cors_set_access_control_headers
 
 
     def username_responder_json
-        username = params["username"] || "Sonifizer"
-        @response = get_string_response(username, 200, 800, 0.5, 8000)
-        render "user.js.erb", layout: false
+        if update_requester('username')
+            username = params["username"] || "Sonifizer"
+            @response = get_string_response(username, 200, 800, 0.5, 8000)
+            render "user.js.erb", layout: false
+        else
+            render nothing: true
+        end
     end
 
-
     def string_responder_json
-        string = params["string"] || "Sonifizer"
-        @response = get_string_response(string, 200, 800, 1, 8000)
-        render "string.js.erb", layout: false
+        if update_requester('string')
+            string = params["string"] || "Sonifizer"
+            @response = get_string_response(string, 200, 800, 1, 8000)
+            render "string.js.erb", layout: false
+        else
+            render nothing: true
+        end
     end
 
     def array_responder_json
-        data_array = params["data"] || [1000, 100, 1, 0]
-        data_array = data_array.map{|sample| sample.to_f}
-        @response = get_array_response(data_array, 200, 800, 1, 8000)
-        render "array.js.erb", layout: false        
+        if update_requester('array')
+            data_array = params["data"] || [1000, 100, 1, 0]
+            data_array = data_array.map{|sample| sample.to_f}
+            @response = get_array_response(data_array, 200, 800, 1, 8000)
+            render "array.js.erb", layout: false 
+        else
+            render nothing: true       
+        end
     end
 
 
     private
 
     def get_string_response(username, lowFreq, highFreq, seconds, fs)
+        requester.recent_requests+=1
+        requester.total_requests+=1
+        requester.save
+
         audio_data = get_string_tone_audio_text_file(username, lowFreq, highFreq, seconds, fs, 0.75)
         response = { :audio=> audio_data,
                 :info => @stamp,
@@ -83,6 +101,17 @@ after_filter :cors_set_access_control_headers
 
     def get_stamp
         @stamp = {  :written_by => "Andrew Madden", :api => "Sonifizer", :site => "http://Sonifizer.com"} 
+    end
+
+
+    def update_requester(type)
+        requester_current_ip = (request.env['REMOTE_ADDR']).to_s
+        requester = Requester.find_by(ip: requester_current_ip) || Requester.new(ip: requester_current_ip, recent_requests: 0, total_requests: 0, black_list: false)
+        requester.recent_requests+=1
+        requester.total_requests+=1
+        requester.save
+        Request.create(requester_id: requester.id, request_type: type)
+        return requester.recent_requests<REQUEST_LIMT
     end
 
 end

@@ -11,6 +11,10 @@ gem 'haml'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 
+
+gem 'devise'
+
+
 # gem 'therubyracer', platforms: :ruby
 
 gem 'turbolinks'
@@ -56,3 +60,4 @@ end
 group :development do
     gem 'better_errors'
 end
+

@@ -22,3 +22,17 @@
     border-bottom: 0.25em solid lightgray;
     padding: 0.5em
 }
+
+
+
+.requesters-table td {
+    border: 1px solid gray;
+    padding: 0.25em;
+    margin: 0.25em;
+}
+.requesters-table thead {
+    border: 2px solid black;
+    padding: 0.25em;
+    margin: 0.25em;
+}
+
