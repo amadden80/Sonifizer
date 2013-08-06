@@ -75,10 +75,6 @@ class ApiController < ApplicationController
     private
 
     def get_string_response(username, lowFreq, highFreq, seconds, fs)
-        requester.recent_requests+=1
-        requester.total_requests+=1
-        requester.save
-
         audio_data = get_string_tone_audio_text_file(username, lowFreq, highFreq, seconds, fs, 0.75)
         response = { :audio=> audio_data,
                 :info => @stamp,
