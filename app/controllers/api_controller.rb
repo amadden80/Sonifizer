@@ -70,7 +70,8 @@ class ApiController < ApplicationController
 
             data_array = data_array.map{|sample| sample.to_f}
             @response = get_array_response(data_array, 200, 800, seconds, 8000)
-            puts seconds
+            puts params["seconds"]
+            puts params["seconds"].to_f
             render "array.js.erb", layout: false 
         else
             render nothing: true       
