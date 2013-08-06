@@ -101,7 +101,7 @@ class ApiController < ApplicationController
 
 
     def update_requester(type)
-        requester_current_ip = (request.env['REMOTE_ADDR']).to_s
+        requester_current_ip = (request.env['HTTP_X_FORWARDED_FOR']).to_s
         requester = Requester.find_by(ip: requester_current_ip) || Requester.new(ip: requester_current_ip, recent_requests: 0, total_requests: 0, black_list: false)
         requester.recent_requests+=1
         requester.total_requests+=1
