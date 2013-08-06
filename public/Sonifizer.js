@@ -62,15 +62,23 @@ function Sonifizer_string(string, Sonifizer_Play, delay){
 //  ... will load the converted audio into the variable Sonifizer_Response_TYPE
 //      ... and when successful, run the callback function on Sonifizer_Response_TYPE
 
-//  Example Call:  Sonifizer_TYPE(variable_of_TYPE, Sonifizer_Play)
+// Sonifizer_TYPE(variable_of_TYPE, callback, seconds)
+//  ... will load the converted audio into the variable Sonifizer_Response_TYPE
+//  ... it will return seconds of audio
+//      ... and when successful, run the callback function on Sonifizer_Response_TYPE
+
+
+
+//  Example Call:  Sonifizer_TYPE(variable_of_TYPE, Sonifizer_Play, 1)
 
 
 var Sonifizer_Response_array = "";
 
-function Sonifizer_array(data_array, callback){
+function Sonifizer_array(data_array, callback, seconds){
     var callback_function = callback || function(response){};
+    var audio_seconds = seconds || 1;
     var url = Sonifizer_Base_URL+"/api/array";
-    $.post(url, {data: data_array},
+    $.post(url, {data: data_array, seconds:audio_seconds},
     function(data){
                 callback_function(Sonifizer_Response_array);
             });

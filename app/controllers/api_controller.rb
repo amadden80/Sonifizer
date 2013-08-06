@@ -62,9 +62,14 @@ class ApiController < ApplicationController
 
     def array_responder_json
         if update_requester('array')
-            data_array = params["data"] || [1000, 100, 1, 0]
+            data_array = params["data"].to_a || [1000, 100, 1, 0]
+            seconds = params["seconds"].to_f || 1
+
+            seconds = 1 if seconds<=0
+            seconds = 5 if seconds>5
+
             data_array = data_array.map{|sample| sample.to_f}
-            @response = get_array_response(data_array, 200, 800, 1, 8000)
+            @response = get_array_response(data_array, 200, 800, seconds, 8000)
             render "array.js.erb", layout: false 
         else
             render nothing: true       
