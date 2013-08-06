@@ -78,7 +78,7 @@ function Sonifizer_array(data_array, callback, seconds){
     var callback_function = callback || function(response){};
     var audio_seconds = seconds || 1;
     var url = Sonifizer_Base_URL+"/api/array";
-    $.post(url, {data: data_array, seconds:audio_seconds},
+    $.post(url, {data: data_array, seconds: audio_seconds},
     function(data){
                 callback_function(Sonifizer_Response_array);
             });
