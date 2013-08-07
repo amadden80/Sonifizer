@@ -7,8 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-Admin.delete_all
-Request.delete_all
-Requester.delete_all
+# Admin.delete_all
+# Request.delete_all
+# Requester.delete_all
 
 Admin.create(email:"sonifizer@gmail.com", password: "password")
