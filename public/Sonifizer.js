@@ -1,10 +1,16 @@
-// Sonifizer
-//  by Andrew Madden
- 
+//---------------------------------------------
+// ************** Sonifizer.js **************
+//---------------------------------------------
+//     http://www.Sonifizer.com/Sonifizer.js 
+//---------------------------------------------
+//                Andrew Madden
+//---------------------------------------------
+
 var Sonifizer_Base_URL = "http://www.Sonifizer.com";
 
-
-// ******* URL API *******
+//---------------------------------------------
+// ************** URL API **************
+//---------------------------------------------
 
 // Current TYPE supported: string
 
@@ -24,7 +30,6 @@ var Sonifizer_Base_URL = "http://www.Sonifizer.com";
 // Sonifizer_TYPE(variable_of_TYPE, callback, delay)
 //  ... will load the converted audio into the variable Sonifizer_Response_TYPE
 //  ... and in delay milliseconds run the callback function on Sonifizer_Response_TYPE
-
 
 //  Example Call:  Sonifizer_TYPE('A_STRING_TO_LISTEN_TO', Sonifizer_Play, 1000)
 
@@ -47,7 +52,13 @@ function Sonifizer_string(string, Sonifizer_Play, delay){
 
 }
 
-// ******* Non-URL API *******
+
+//---------------------------------------------
+// ************** Non-URL API **************
+//---------------------------------------------
+
+// Requires jQuery, specifically $.post()
+
 
 // Current TYPE supported: array
 
@@ -67,8 +78,6 @@ function Sonifizer_string(string, Sonifizer_Play, delay){
 //  ... it will return seconds of audio
 //      ... and when successful, run the callback function on Sonifizer_Response_TYPE
 
-
-
 //  Example Call:  Sonifizer_TYPE(variable_of_TYPE, Sonifizer_Play, 1)
 
 
@@ -84,10 +93,11 @@ function Sonifizer_array(data_array, callback, seconds){
             });
 }
 
+//--------------------------------------------- 
+// ************** Helpers **************
+//---------------------------------------------
 
-// ******* Helpers *******
-
-// Create and autoplays an <audio> node with a Base64 audio src
+// Create and autoplay an audio node with a Base64 audio src
 function Sonifizer_Play(Audio_Data_Base_64){
     var _body = document.getElementsByTagName('body') [0];
     var Sonifizer_audio = document.createElement('audio');
@@ -98,5 +108,3 @@ function Sonifizer_Play(Audio_Data_Base_64){
     Sonifizer_audio.appendChild(Sonifizer_source);
     _body.appendChild(Sonifizer_audio);
 }
-
-

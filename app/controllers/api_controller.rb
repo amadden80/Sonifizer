@@ -2,7 +2,7 @@
 class ApiController < ApplicationController
 
 
-    REQUEST_LIMT = 100
+    REQUEST_LIMT = 1000
 
 
     include ApplicationHelper
@@ -68,7 +68,8 @@ class ApiController < ApplicationController
             seconds = 1 if seconds<=0
             seconds = 10 if seconds>10
 
-            puts data_array
+            data_array.unshift(data_array.first)
+            data_array.push(data_array.last)
 
             data_array = data_array.map{|sample| sample.to_f}
             @response = get_array_response(data_array, 200, 800, seconds, 8000)

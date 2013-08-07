@@ -13,6 +13,7 @@
  */
 
 
+
 .example-section{
     border-bottom: 0.25em solid gray;
     padding: 2em
@@ -22,6 +23,7 @@
     border-bottom: 0.25em solid lightgray;
     padding: 0.5em
 }
+
 
 
 
@@ -37,8 +39,28 @@
 }
 
 
+
 #Sonifizer-js{
     white-space:pre-wrap;
+    border:1px solid lightgray;
+}
+#Sonifizer-js-download{
+    display:inline-block;
+}
+
+
+
+#social-buttons-container{
+    min-height: 2em;
+}
+
+.social-buttons{
+    display: none;
+}
+
+
+#admin-bar{
+    padding-top: 2em;
 }
 
 

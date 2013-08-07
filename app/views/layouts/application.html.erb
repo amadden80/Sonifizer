@@ -6,23 +6,66 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body class="container">
+<body>
+    <div class="container">
 
-<p class="notice"><%= notice %></p>       
-<p class="alert"><%= alert %></p>
-<%= yield %>
 
-<div class="row"></div>
+        <p class="notice"><%= notice %></p>       
+        <p class="alert"><%= alert %></p>
 
-<% if !current_admin %>
-    <%= link_to("Admin-Login", new_admin_session_path) %>
-<% elsif current_admin %>    
-    <%= link_to("Home", root_path) %>
-    <%= link_to("Admin-Console", admin_path) %>
-    <%= link_to("Log-out", destroy_admin_session_path) %>
-<% end %>
 
-<div class="row"></div>
+
+        <!-- Social Buttons -->
+
+        <section id="social-buttons-container">
+
+        <div class="row"></div>
+        <div class="social-buttons" id="fb-root"></div>
+
+        <script>
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+        </script>
+
+
+        <div class="fb-like social-buttons" data-href="http://www.Sonifizer.com" data-width="500" data-layout="button_count" data-show-faces="true" data-send="false"></div>
+
+        <a href="https://twitter.com/share" class="twitter-share-button social-buttons" data-url="http://www.Sonifizer.com" data-text="@Sonifizer">Tweet</a>
+
+        </section>
+
+
+        <div class="row"></div>
+
+        <%= yield %>
+
+        <div class="row"></div>
+        <div class="row"></div>
+
+        <div class="admin-bar four columns offset-by-eight">
+            <a href="http://AndrewMadden.com">by Andrew Madden</a>
+            <% if !current_admin %>
+                <%= link_to("Admin?", new_admin_session_path) %>
+            <% elsif current_admin %>    
+                <%= link_to("Home", root_path) %>
+                <%= link_to("Admin-Console", admin_path) %>
+                <%= link_to("Log-out", destroy_admin_session_path, method: :delete) %>
+            <% end %>
+        </div>
+
+    </div> <!-- <div class="container"> -->
+
 
 </body>
+
+
+
+
 </html>
