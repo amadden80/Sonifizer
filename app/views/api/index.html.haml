@@ -91,10 +91,17 @@
 .row
     %h2
         Sonifizer.js:
+        %a{href: "/Sonifizer.js", target: "_blank"}
+            %h5
+                (download)
+
     .row
         .sixteen.columns
-            %section.thirdteen.columns.example-section
-                %script{src: "https://gist.github.com/amadden80/6157105.js"}
-    %h2
+            %section.thirdteen.columns.example-section#Sonifizer-js
+                %script
+                    $('#Sonifizer-js').load('/Sonifizer.js');
+
+
+
 
 

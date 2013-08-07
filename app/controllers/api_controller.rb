@@ -68,6 +68,8 @@ class ApiController < ApplicationController
             seconds = 1 if seconds<=0
             seconds = 10 if seconds>10
 
+            puts data_array
+
             data_array = data_array.map{|sample| sample.to_f}
             @response = get_array_response(data_array, 200, 800, seconds, 8000)
             puts params["seconds"]

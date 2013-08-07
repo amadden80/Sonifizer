@@ -85,7 +85,6 @@ function Sonifizer_array(data_array, callback, seconds){
 }
 
 
-
 // ******* Helpers *******
 
 // Create and autoplays an <audio> node with a Base64 audio src
