@@ -3,17 +3,15 @@
 <head>
   <title>Sonifizer</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %> 
+  <script src="http://Sonifizer.com//Sonifizer.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
     <div class="container">
 
-
         <p class="notice"><%= notice %></p>       
         <p class="alert"><%= alert %></p>
-
-
 
         <!-- Social Buttons -->
 
@@ -50,16 +48,20 @@
         <div class="row"></div>
         <div class="row"></div>
 
-        <div class="admin-bar four columns offset-by-eight">
-            <a href="http://AndrewMadden.com">by Andrew Madden</a>
+        <div id="admin-bar">
+            <a href="http://AndrewMadden.com">Sonifizer by Andrew Madden</a>
+          </br>
             <% if !current_admin %>
-                <%= link_to("Admin?", new_admin_session_path) %>
+                <%= link_to("Admin-Login", new_admin_session_path) %>
             <% elsif current_admin %>    
                 <%= link_to("Home", root_path) %>
+                 ~ 
                 <%= link_to("Admin-Console", admin_path) %>
+                 ~ 
                 <%= link_to("Log-out", destroy_admin_session_path, method: :delete) %>
             <% end %>
         </div>
+        <div class="row"></div>
 
     </div> <!-- <div class="container"> -->
 

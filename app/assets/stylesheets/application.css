@@ -60,10 +60,14 @@
 
 
 #admin-bar{
+    text-align:center;
     padding-top: 2em;
+    text-decoration: none;
 }
+
 
 
 a{
-    text-decoration: none;
+    text-decoration:none !important;
 }
+
